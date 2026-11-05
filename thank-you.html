@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-WZCS4T8");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1LN6SXVT5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Y1LN6SXVT5');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Thank You | NeoLiv Grand Forest, Khopoli</title>
+    <!-- Post-enquiry page: keep it out of search results -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#F5EFE2" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
+
+    <style>
+        /* Grand Forest palette (Theme & Collateral system) */
+        :root {
+            --emerald: #1F5841;
+            --timber: #A75926;
+            --gold: #B08D57;
+            --gold-pale: #D9C199;
+            --cream: #F5EFE2;
+            --muted: #66675C;
+            --sans: Montserrat, Arial, sans-serif;
+            --ease: cubic-bezier(.2, .8, .2, 1);
+            --frame: clamp(10px, 1.6vw, 18px);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; }
+        body { font-family: var(--sans); color: var(--emerald); background: var(--cream); -webkit-font-smoothing: antialiased; }
+        a { color: inherit; }
+
+        /* ===== one screen: logo / message / forest strip ===== */
+        .ty {
+            position: relative; display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+            height: 100vh; height: 100svh; overflow: hidden; isolation: isolate;
+            /* embossed-leaf texture, as on the collateral content pages */
+            background:
+                radial-gradient(120% 80% at 50% 38%, rgba(245, 239, 226, 0) 40%, rgba(217, 193, 153, .28) 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%231F5841' stroke-opacity='.07' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M30 70C30 40 52 22 74 18c-2 26-16 46-44 52Z'/%3E%3Cpath d='M30 70C46 52 58 38 74 18'/%3E%3Cpath d='M120 150c6-28 30-42 52-40-8 24-26 40-52 40Z'/%3E%3Cpath d='M120 150c18-14 34-26 52-40'/%3E%3Cpath d='M128 40c22 4 36 22 36 44-22-4-36-20-36-44Z'/%3E%3Cpath d='M128 40c12 14 24 28 36 44'/%3E%3Cpath d='M22 150c4-18 20-30 38-28-4 18-20 30-38 28Z'/%3E%3Cpath d='M22 150c12-10 24-18 38-28'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 180px 180px,
+                var(--cream);
+        }
+
+        /* gold hairline "canopy" frame */
+        .ty::after {
+            content: ""; position: absolute; inset: var(--frame); z-index: 3; pointer-events: none;
+            border: 1px solid rgba(176, 141, 87, .55); border-radius: 20px;
+        }
+        .ty__corner { position: absolute; z-index: 3; width: 22px; height: 22px; color: var(--gold); pointer-events: none; }
+        .ty__corner svg { display: block; width: 100%; height: 100%; }
+        .ty__corner--tl { left: calc(var(--frame) - 11px); top: calc(var(--frame) - 11px); }
+        .ty__corner--tr { right: calc(var(--frame) - 11px); top: calc(var(--frame) - 11px); }
+
+        /* ---- top: logo ---- */
+        .ty__top { position: relative; z-index: 2; display: flex; justify-content: center; padding-top: calc(var(--frame) + clamp(24px, 4.6vh, 46px)); }   /* clear space between the gold frame and the logo */
+        .ty__logo img { display: block; width: clamp(150px, 16vw, 210px); height: auto; }
+
+        /* ---- centre: message ---- */
+        .ty__main {
+            position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 0; padding: clamp(12px, 3vh, 32px) 24px; text-align: center;
+        }
+        .ty__tick { width: clamp(54px, 8.4vh, 76px); height: clamp(54px, 8.4vh, 76px); margin-bottom: clamp(12px, 2.4vh, 22px); }
+        .ty__tick svg { display: block; width: 100%; height: 100%; overflow: visible; }
+        .ty__tick .ring { fill: var(--emerald); transform-origin: 50% 50%; animation: tyPop .6s var(--ease) both .15s; }
+        .ty__tick .halo { fill: none; stroke: var(--gold); stroke-width: 1; opacity: .7; transform-origin: 50% 50%; animation: tyHalo 2.8s ease-out infinite 1s; }
+        .ty__tick .check { fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: tyDraw .55s var(--ease) forwards .6s; }
+        @keyframes tyPop { from { transform: scale(.4); opacity: 0; } }
+        @keyframes tyDraw { to { stroke-dashoffset: 0; } }
+        @keyframes tyHalo { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.45); opacity: 0; } }
+
+        .ty__eyebrow { margin: 0 0 clamp(8px, 1.6vh, 14px); font-size: 11px; font-weight: 700; letter-spacing: .32em; margin-right: -.32em; text-transform: uppercase; color: var(--timber); }
+        /* always two lines: "Thank you for your interest in" / "NeoLiv Grand Forest." The size also follows the screen width so line 1 never wraps */
+        .ty h1 { margin: 0; font-size: min(clamp(24px, calc(min(4.4vw, 6vh) - 2px), 52px), calc((100vw - 44px) / 16.2)); font-weight: 300; line-height: 1.12; letter-spacing: -.025em; }
+        .ty h1 span, .ty h1 em { display: block; white-space: nowrap; }
+        .ty h1 em { font-style: normal; font-weight: 400; color: var(--timber); }
+
+        .ty__rule { display: flex; align-items: center; gap: 12px; margin: clamp(14px, 2.6vh, 24px) 0; color: var(--gold); }
+        .ty__rule::before, .ty__rule::after { content: ""; width: clamp(40px, 6vw, 70px); height: 1px; background: currentColor; }
+        .ty__rule svg { width: 14px; height: 14px; }
+
+        .ty__msg { margin: 0; max-width: 40ch; font-size: clamp(14px, 2vh, 16.5px); line-height: 1.65; color: var(--muted); }
+
+        .ty__cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: clamp(18px, 3.4vh, 32px); }
+        .ty__btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: clamp(44px, 6vh, 52px); padding: 0 26px;
+            border-radius: 999px; border: 1.5px solid transparent; font-size: 14px; font-weight: 600; text-decoration: none;
+            transition: background .25s, color .25s, border-color .25s, transform .25s, box-shadow .25s;
+        }
+        .ty__btn svg { width: 17px; height: 17px; flex: none; }
+        .ty__btn:hover { transform: translateY(-2px); }
+        .ty__btn--primary { background: var(--timber); color: #fff; box-shadow: 0 10px 24px -10px rgba(167, 89, 38, .6); }
+        .ty__btn--primary:hover { background: var(--emerald); box-shadow: 0 10px 24px -10px rgba(31, 88, 65, .6); }
+        .ty__btn--ghost { border-color: rgba(31, 88, 65, .35); color: var(--emerald); background: rgba(255, 255, 255, .45); }
+        .ty__btn--ghost:hover { border-color: var(--emerald); background: var(--emerald); color: #fff; }
+        .ty__btn:focus-visible, .ty__home:focus-visible, .ty__logo:focus-visible { outline: 2px solid var(--timber); outline-offset: 3px; }
+
+        .ty__home { display: inline-flex; align-items: center; gap: 8px; margin-top: clamp(14px, 2.6vh, 24px); padding-bottom: 3px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-decoration: none; color: var(--emerald); border-bottom: 1px solid rgba(31, 88, 65, .3); transition: color .2s, border-color .2s; }
+        .ty__home:hover { color: var(--timber); border-color: var(--timber); }
+        .ty__home svg { width: 15px; height: 15px; transition: transform .25s var(--ease); }
+        .ty__home:hover svg { transform: translateX(-3px); }
+
+        /* entrance */
+        .ty__in { animation: tyUp .8s var(--ease) both; }
+        .ty__in:nth-child(2) { animation-delay: .25s; }
+        .ty__in:nth-child(3) { animation-delay: .35s; }
+        .ty__in:nth-child(4) { animation-delay: .45s; }
+        .ty__in:nth-child(5) { animation-delay: .55s; }
+        .ty__in:nth-child(6) { animation-delay: .65s; }
+        .ty__in:nth-child(7) { animation-delay: .75s; }
+        @keyframes tyUp { from { opacity: 0; transform: translateY(14px); } }
+
+        /* ---- bottom: forest strip, fading into the cream ---- */
+        .ty__strip { position: relative; z-index: 1; height: clamp(90px, 21vh, 220px); overflow: hidden; }
+        .ty__strip img {
+            display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%;
+            -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 55%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 55%);
+            animation: tyPan 30s ease-in-out infinite alternate;
+        }
+        @keyframes tyPan { from { transform: scale(1.06) translateX(-1.5%); } to { transform: scale(1.06) translateX(1.5%); } }
+
+        @media (max-width: 560px) {
+            .ty__corner { display: none; }
+            .ty__eyebrow { font-size: 10px; }
+            .ty__cta { width: 100%; flex-wrap: nowrap; gap: 8px; }
+            .ty__btn { flex: 1 1 0; padding: 0 10px; font-size: 13px; gap: 6px; }
+            .ty__btn svg { width: 15px; height: 15px; }
+        }
+        /* short screens (small laptops, landscape phones): tighter spacing so it all stays on one screen */
+        @media (max-height: 700px) {
+            .ty__top { padding-top: calc(var(--frame) + 22px); }
+            .ty__strip { height: clamp(70px, 15vh, 110px); }
+        }
+        .ty__l-short { display: none; }
+        @media (max-width: 560px) { .ty__l-full { display: none; } .ty__l-short { display: inline; } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ty__tick .halo { display: none; }
+            .ty__in, .ty__tick .ring, .ty__strip img { animation: none; }
+            .ty__tick .check { animation: none; stroke-dashoffset: 0; }
+            .ty__btn:hover { transform: none; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZCS4T8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="ty">
+        <span class="ty__corner ty__corner--tl" aria-hidden="true"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M11 2l9 9-9 9-9-9Z" /><circle cx="11" cy="11" r="2" fill="currentColor" stroke="none" /></svg></span>
+        <span class="ty__corner ty__corner--tr" aria-hidden="true"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M11 2l9 9-9 9-9-9Z" /><circle cx="11" cy="11" r="2" fill="currentColor" stroke="none" /></svg></span>
+
+        <header class="ty__top">
+            <a class="ty__logo ty__in" href="index.html" data-keep-utm aria-label="NeoLiv Grand Forest, Khopoli, home">
+                <img src="assets/images/gf-logo-emerald-640.webp" alt="NeoLiv Grand Forest" width="640" height="187" />
+            </a>
+        </header>
+
+        <main class="ty__main" aria-labelledby="tyTitle">
+            <div class="ty__tick" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><circle class="halo" cx="32" cy="32" r="30" /><circle class="ring" cx="32" cy="32" r="28" /><path class="check" d="M20 33l8 8 16-17" /></svg>
+            </div>
+            <p class="ty__eyebrow ty__in">Enquiry received</p>
+            <h1 id="tyTitle" class="ty__in"><span>Thank you for your interest in</span> <em>NeoLiv Grand Forest.</em></h1>
+            <div class="ty__rule ty__in" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 20C4 10 10 4 20 4c0 10-6 16-16 16Z" /></svg></div>
+            <p class="ty__msg ty__in">We appreciate your interest in our project. Our team shall contact you very soon.</p>
+            <div class="ty__cta ty__in">
+                <a class="ty__btn ty__btn--primary" href="tel:+919240244489">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z" /></svg>
+                    <span class="ty__l-full">Call +91 92402 44489</span><span class="ty__l-short">Call us</span>
+                </a>
+                <a class="ty__btn ty__btn--ghost" href="https://wa.me/919240244489?text=Hi%2C%20I%20just%20enquired%20about%20NeoLiv%20Grand%20Forest." target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" /></svg>
+                    WhatsApp us
+                </a>
+            </div>
+            <a class="ty__home ty__in" href="index.html" data-keep-utm>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+                Back to Home
+            </a>
+        </main>
+
+        <div class="ty__strip" aria-hidden="true">
+            <img src="assets/images/intro-aerial-1440.webp" alt="" width="1440" height="900" />
+        </div>
+    </div>
+
+    <script>
+        // Back to Home without a reload: when the visitor came from the home page, step back in history so the
+        // browser restores that page as it was (no reload, no intro loader). Otherwise open the home page normally.
+        (function () {
+            var home = 'index.html' + location.search;   // keeps the visitor's UTM parameters
+            var fromHome = false;
+            try {
+                var ref = new URL(document.referrer);
+                fromHome = ref.origin === location.origin && /(^|\/)(index\.html)?$/.test(ref.pathname);
+            } catch (e) { }
+            document.querySelectorAll('[data-keep-utm]').forEach(function (a) {
+                a.href = home;
+                a.addEventListener('click', function (e) {
+                    if (fromHome && history.length > 1) { e.preventDefault(); history.back(); }
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
