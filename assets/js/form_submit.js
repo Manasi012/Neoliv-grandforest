@@ -71,23 +71,17 @@ function send_data_zapier(form_data, webhook_url) {
         data: form_data,
         dataType: "text",
         beforeSend: function() {
-            $('.overlay_with_high_zindex').show();
+            // no on-page thank-you message: the button shows progress, then the Thank You page opens
+            $('.error_msg').hide();
+            $('.submit_button').prop('disabled', true).text('Submitting…');
         },
         success: function(result) {
-            $(".sidenav_form").hide();
-            $('.open_form_in_contactus_section').hide();
-            $('.success_msg').show();
             go_to_thank_you();
-            // <a href="#" class="btn btn-success" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!" onclick="SEMICOLON.widget.notifications(this); return false;">Show Success</a>
             return false;
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            // <a href="#" class="btn btn-danger" data-notify-type="error" data-notify-msg="<i class=icon-remove-sign></i> Incorrect Input. Please Try Again!" onclick="SEMICOLON.widget.notifications(this); return false;">Show Error</a>
             $('.error_msg').show();
-        },
-        complete: function() {
-            $('.error_msg').hide();
-            $(".overlay_with_high_zindex").hide();
+            $('.submit_button').prop('disabled', false).text('Submit');
         }
     });
 }

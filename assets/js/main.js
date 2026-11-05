@@ -517,6 +517,7 @@ window.gfReplay = function (els, cls, inMargin) {
         if (form && form.reset) form.reset();
         $$('.success_msg, .error_msg, .form_error', sheet).forEach(function (el) { el.style.display = 'none'; });
         $$('.sidenav_form', sheet).forEach(function (el) { el.style.display = ''; });
+        $$('.submit_button', sheet).forEach(function (b) { b.disabled = false; b.textContent = 'Submit'; });
     });
     sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSheet(); });
     document.addEventListener('keydown', function (e) {
